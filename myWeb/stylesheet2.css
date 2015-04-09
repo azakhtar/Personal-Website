@@ -1,0 +1,211 @@
+/*#############################################################
+Formats the top and bottom tabs along with the text and the background images */
+.MainTabs {
+	display: inline-block;
+	clear:both;
+	height: 12%;
+	width: 99.6%;
+	/*border: 2px solid black;*/
+}
+
+#starting {
+    position: fixed;
+    top: 0.25em;
+}
+
+#ending {
+    position: fixed;
+    bottom: 0em;
+}
+
+#column2:hover {
+	color: #cc0000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/*z-indez is set to -1 so the image is transparent*/
+body img {
+	display:inline;
+	clear:both;
+	position: relative;
+	width:100%;
+	height:100%;
+	z-index: -1;
+}
+/*#############################################################*/
+div img {
+	display: inline-block;
+	clear: both;
+	position: absolute;
+	top: 25%; 
+	left: 4%;
+	width: 22.5%;
+	height: 30%;
+	z-index: 1;
+}
+
+.headingTitles{
+	font-family: times, Times New Roman, times-roman, georgia, serif;
+	font-size: 48px;
+	line-height: 40px;
+	letter-spacing: -1px;
+	color: #444;
+	font-weight: 100;
+}
+/*#############################################################*/
+/*Animations added for activities*/
+.bannermoves {
+	display: inline-block;
+	clear: both;
+}
+.first {
+	/*display: inline-block;
+	clear: both;*/
+	position: relative; 
+	margin-top: 8%;
+	left: 3%;
+	width: 300%;
+	height: 47.5%;
+	z-index: 1;
+}
+
+.first {
+    -webkit-animation: bannermoves 30s linear infinite;
+    animation: bannermoves 30s linear infinite;
+    /*-moz-animation: bannermoves 30s linear infinite;
+    -ms-animation: bannermoves 30s linear infinite;
+    -o-animation: bannermoves 30s linear infinite; */
+}
+
+.first:hover {
+    -webkit-animation: bannermoves paused;
+    animation: bannermoves paused;
+}
+
+@-webkit-keyframes "bannermoves" {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -2125px;
+ }
+}
+/*#############################################################*/
+/*Formatting the headings in the top tab and giving location to the table the headings are contained in*/
+.Headings {
+	font-size: 20px;
+	font-family: Georgia, sans-serif;
+	color: black;
+	text-align: center;
+}
+
+#introTable {
+	margin-left: 4.5%;
+	margin-top: 1%;
+}
+
+#introTable tr td {
+	width: 20%;
+}
+/*#############################################################*/
+/*This segment of the code formats the "experience" tab.*/
+#Experience {
+	/*display: inline-block;
+	clear: both;
+	position: fixed;
+	top: 25em; 
+	z-index: -1;*/
+}
+
+
+#companiesTable {
+	margin-left: 12.5%;
+	/*margin-top: 10%; */
+	border-collapse: collapse;
+}
+
+.professional {
+	height: 200px;
+	width: 225px;
+	/*padding-left: 25px;
+	padding-right: 25px;*/
+	text-align: center;
+}
+
+/*z-indez is set to 1 so the images for logos appear on top*/
+td img {
+	position: relative;
+	height: 225px;
+	width: 250px;
+	margin-top: 20%;
+	box-shadow: none;
+	z-index: 1;
+}
+
+td img:hover{
+	-webkit-box-shadow: 0px 0px 20px;
+	box-shadow: 0px 0px 20px;
+}
+/*This is introduced to add descriptions for the professional experience by hovering the mouse over the images*/
+.text1 {
+	position: relative;
+	font-family: Georgia, sans-serif;
+	font-size: 16px;
+	color: black;
+	margin-left: 10%;
+	opacity: 0;
+	text-decoration: none;
+}
+
+td:hover .text1{
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-box-shadow: 0 0 10px #ccc;
+	box-shadow: 0 0 10px #ccc;
+	text-align: center;
+	background-color: #FFFAE6;
+	opacity: 0.9;
+}
+/*#############################################################*/
+/*Following lines of code are used for the About Me and Contact Me sections*/
+.detailsAboutMe {
+	display: inline-block;
+	clear: both;
+	background-color: white;
+	position: absolute;
+	/* top: 66%; */
+	left: 3%;
+	width: 40%;
+	padding: 2.5% 2.5% 2.5% 2.5%;
+	font-size: 20px;
+	font-family: Georgia, sans-serif;
+	z-index: -1;
+	border: 4px solid black;
+	border-radius: 5%;
+}
+
+.detailsAboutMe img {
+	position: relative;
+	top: 75%;
+	left: 75%;
+    -webkit-transform:scale(0.7);
+    transform:scale(0.7);
+}
+
+.detailsAboutMe img:hover {
+	-webkit-box-shadow: 0px 0px 20px;
+	box-shadow: 0px 0px 20px;
+}
+
+.detailsAboutMe p:first-letter{
+               text-transform: uppercase;
+          }
+		  
+.detailsAboutMe p {
+	color: #424242;
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	letter-spacing:0.1em;
+	text-transform: lowercase;
+	font-size: 18pt;
+	font-variant: small-caps;
+}
